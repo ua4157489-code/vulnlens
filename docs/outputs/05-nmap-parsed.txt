@@ -1,0 +1,14 @@
+Source  : nmap
+Assets  : 1
+Findings: 2
+
+By severity:
+  Critical 0
+  High     0
+  Medium   0
+  Low      0
+  Info     2
+
+Top 2 findings:
+  [Info    ] Open port 22/tcp (ssh) @ 127.0.0.1:22
+  [Info    ] Open port 80/tcp (http) @ 127.0.0.1:80

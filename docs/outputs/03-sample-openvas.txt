@@ -1,0 +1,15 @@
+Source  : openvas
+Assets  : 2
+Findings: 3
+
+By severity:
+  Critical 1
+  High     0
+  Medium   1
+  Low      0
+  Info     1
+
+Top 3 findings:
+  [Critical] Remote Code Execution in Example Service @ 192.168.56.101:8080 (CVSS 9.8)
+  [Medium  ] Weak SSL/TLS Protocol Versions Supported @ 192.168.56.101:443 (CVSS 4.3)
+  [Info    ] TCP Timestamps @ 192.168.56.103

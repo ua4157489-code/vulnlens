@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<nmaprun scanner="nmap" args="nmap -sV --script vuln -oX sample_nmap.xml 192.168.56.101" version="7.94">
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.101" addrtype="ipv4"/>
+    <hostnames><hostname name="juice-shop.lab" type="user"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22">
+        <state state="open"/>
+        <service name="ssh" product="OpenSSH" version="8.9p1"/>
+      </port>
+      <port protocol="tcp" portid="3000">
+        <state state="open"/>
+        <service name="http" product="Node.js Express framework"/>
+        <script id="http-vuln-cve2017-5638" output="VULNERABLE: Apache Struts remote code execution"/>
+      </port>
+      <port protocol="tcp" portid="8080">
+        <state state="closed"/>
+        <service name="http-proxy"/>
+      </port>
+    </ports>
+  </host>
+  <host>
+    <status state="down"/>
+    <address addr="192.168.56.102" addrtype="ipv4"/>
+  </host>
+</nmaprun>

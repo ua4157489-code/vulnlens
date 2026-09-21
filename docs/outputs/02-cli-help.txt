@@ -1,0 +1,14 @@
+usage: vulnlens parse [-h] [-f {auto,nmap,openvas}]
+                      [-m {info,low,medium,high,critical}] [-o OUTPUT]
+                      file
+
+positional arguments:
+  file                  Nmap (-oX) or OpenVAS XML report
+
+options:
+  -h, --help            show this help message and exit
+  -f, --format {auto,nmap,openvas}
+                        Input format (default: auto-detect)
+  -m, --min-severity {info,low,medium,high,critical}
+                        Hide findings below this level
+  -o, --output OUTPUT   Write normalized JSON to this file

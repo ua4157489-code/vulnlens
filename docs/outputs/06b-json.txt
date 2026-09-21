@@ -1,0 +1,41 @@
+Wrote 2 findings to scans/nmap_lab.json
+{
+  "source": "nmap",
+  "metadata": {
+    "scanner": "nmap",
+    "version": "7.94SVN",
+    "args": "nmap -sV --script vuln -p 22,80,443,3000,8080 -oX scans/nmap_lab.xml 127.0.0.1"
+  },
+  "summary": {
+    "assets": 1,
+    "findings": 2,
+    "by_severity": {
+      "Critical": 0,
+      "High": 0,
+      "Medium": 0,
+      "Low": 0,
+      "Info": 2
+    }
+  },
+  "assets": [
+    {
+      "address": "127.0.0.1",
+      "hostnames": [
+        "localhost"
+      ],
+      "os": null
+    }
+  ],
+  "findings": [
+    {
+      "title": "Open port 22/tcp (ssh)",
+      "severity": "Info",
+      "source": "nmap",
+      "host": "127.0.0.1",
+      "port": 22,
+      "protocol": "tcp",
+      "cvss": null,
+      "description": "Service 'ssh' is reachable running OpenSSH 9.6p1 Ubuntu 3ubuntu13.19.",
+      "solution": "Confirm the service is required; close or firewall it otherwise.",
+      "cves": [],
+      "cwes": [],

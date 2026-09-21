@@ -1,0 +1,26 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- /home/umer/vulnlens/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/umer/vulnlens
+configfile: pyproject.toml
+testpaths: tests
+collecting ... collected 16 items
+
+tests/test_cli.py::CliTests::test_bad_file_returns_error_code PASSED     [  6%]
+tests/test_cli.py::CliTests::test_json_export_with_min_severity PASSED   [ 12%]
+tests/test_cli.py::CliTests::test_summary_output PASSED                  [ 18%]
+tests/test_collectors.py::NmapTests::test_hostname_captured PASSED       [ 25%]
+tests/test_collectors.py::NmapTests::test_only_up_hosts_and_open_ports PASSED [ 31%]
+tests/test_collectors.py::NmapTests::test_vulnerable_nse_script_becomes_high PASSED [ 37%]
+tests/test_collectors.py::OpenVASTests::test_counts_and_assets PASSED    [ 43%]
+tests/test_collectors.py::OpenVASTests::test_cve_and_port_parsing PASSED [ 50%]
+tests/test_collectors.py::OpenVASTests::test_severity_mapping PASSED     [ 56%]
+tests/test_collectors.py::DetectionTests::test_autodetect PASSED         [ 62%]
+tests/test_collectors.py::DetectionTests::test_missing_file PASSED       [ 68%]
+tests/test_collectors.py::DetectionTests::test_rejects_xxe PASSED        [ 75%]
+tests/test_models.py::SeverityTests::test_cvss_boundaries PASSED         [ 81%]
+tests/test_models.py::SeverityTests::test_from_name_aliases PASSED       [ 87%]
+tests/test_models.py::FindingTests::test_id_is_stable_and_distinct PASSED [ 93%]
+tests/test_models.py::FindingTests::test_scan_result_filtering_and_counts PASSED [100%]
+
+============================== 16 passed in 0.05s ==============================

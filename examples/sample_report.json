@@ -1,0 +1,85 @@
+{
+  "source": "openvas",
+  "metadata": {},
+  "summary": {
+    "assets": 2,
+    "findings": 3,
+    "by_severity": {
+      "Critical": 1,
+      "High": 0,
+      "Medium": 1,
+      "Low": 0,
+      "Info": 1
+    }
+  },
+  "assets": [
+    {
+      "address": "192.168.56.101",
+      "hostnames": [
+        "juice-shop.lab"
+      ],
+      "os": null
+    },
+    {
+      "address": "192.168.56.103",
+      "hostnames": [],
+      "os": null
+    }
+  ],
+  "findings": [
+    {
+      "title": "Remote Code Execution in Example Service",
+      "severity": "Critical",
+      "source": "openvas",
+      "host": "192.168.56.101",
+      "port": 8080,
+      "protocol": "tcp",
+      "cvss": 9.8,
+      "description": "An unauthenticated attacker can execute arbitrary code.",
+      "solution": "Upgrade to the latest version.",
+      "cves": [
+        "CVE-2099-0001"
+      ],
+      "cwes": [],
+      "owasp": [],
+      "references": [],
+      "id": "8582a91749b5"
+    },
+    {
+      "title": "Weak SSL/TLS Protocol Versions Supported",
+      "severity": "Medium",
+      "source": "openvas",
+      "host": "192.168.56.101",
+      "port": 443,
+      "protocol": "tcp",
+      "cvss": 4.3,
+      "description": "The service accepts deprecated TLS protocol versions.",
+      "solution": "Disable TLS 1.0 and 1.1.",
+      "cves": [
+        "CVE-2011-3389"
+      ],
+      "cwes": [],
+      "owasp": [],
+      "references": [
+        "https://example.org/tls-advisory"
+      ],
+      "id": "5c0fbac80d0a"
+    },
+    {
+      "title": "TCP Timestamps",
+      "severity": "Info",
+      "source": "openvas",
+      "host": "192.168.56.103",
+      "port": null,
+      "protocol": null,
+      "cvss": null,
+      "description": "The remote host implements TCP timestamps.",
+      "solution": "",
+      "cves": [],
+      "cwes": [],
+      "owasp": [],
+      "references": [],
+      "id": "4b18d2c4c6af"
+    }
+  ]
+}
