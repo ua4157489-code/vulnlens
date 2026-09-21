@@ -1,0 +1,46 @@
+name: Bug report
+description: Something is not working as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! **Do not attach real scan files that contain private hostnames or IPs.** Redact them first.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you run and what went wrong?
+      placeholder: "I ran `vulnlens parse scan.xml` and got ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: dropdown
+    id: scanner
+    attributes:
+      label: Scanner / input format
+      options: [Nmap XML, OpenVAS XML, Other]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: VulnLens version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Python version and OS
+      placeholder: "Python 3.13, Ubuntu 24.04"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output
+      render: shell

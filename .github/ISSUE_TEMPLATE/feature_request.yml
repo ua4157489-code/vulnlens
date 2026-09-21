@@ -1,0 +1,21 @@
+name: Feature request
+description: Suggest a new collector, report format, or improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Sample input (optional)
+      description: For new scanner formats, link to a redacted sample file or public docs.
